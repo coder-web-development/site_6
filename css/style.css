@@ -1,0 +1,705 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Обнуление убираем, иначе появится горизонтальный скроллер, в 1 пиксель, из-за ширины 
+границы в 1 пиксель для .header, .main, и .footer */
+/* Для того, чтобы скроллера не было, устанавливаем для всех элементов свойство 
+ box-sizing: border-box; */
+
+
+html {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    display: flex;
+}
+
+ul {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Google Sans', sans-serif;
+}
+
+.header {
+    width: 100%;
+    max-width: 960px;
+    min-width: 200px;
+    /* box-sizing: border-box; */
+    margin: 0 auto;
+    background: #f1f1f1;
+    /* border: 1px solid red; */
+}
+
+.main {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 960px;
+    min-width: 200px;
+    /* box-sizing: border-box; */
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+}
+
+.footer {
+    width: 100%;
+    max-width: 960px;
+    min-width: 200px;
+    /* box-sizing: border-box; */
+    margin: 0 auto;
+    /* border: 1px solid green; */
+}
+
+/* ------------------------- */
+
+.main {
+    display: flex;
+    /* Если ни задано свойство для родительского элемента display: flex, то при задании
+    ширины в дочернем элементе .container_welcom (960px) появляется горизонтальный скроллер */
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ------------------------- */
+
+/* Урок 1 - Начинаем с нуля */
+
+.container_header {
+    max-width: 960px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    /* border: 1px solid blue; */
+}
+
+.block_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 99%;
+    /* width: 100%;  
+    margin: 0 auto;     */
+    flex-wrap: wrap;
+    margin: 0 auto;
+    /* border: 1px solid gray; */
+}
+
+.header_logo {
+    /* border: 1px solid #27ef3b; */
+    margin-left: 50px;
+}
+
+.header_menu {
+    /* border: 1px solid #208f2b; */
+    margin-right: 50px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    /* max-width: 100%; */
+}
+
+.header_menu a {
+    color: #000;
+    font-size: 16px;
+    padding: 27px 6px;
+    margin-right: 20px;
+}
+
+.header_menu a:hover {
+    background: #faf430;
+}
+
+/* .header_menu a:last-child { margin-right: 0px;} */
+
+.header_menu ul li:last-child {
+    margin-right: -20px;
+}
+
+/* Для ul и li задаём свойство display: flex, вверх страницы строка - 21 */
+
+#menu_checkbox {
+    display: none;
+}
+
+
+/* Урок 3 - Flexbox вёрстка карточки */
+
+.container_image {}
+
+.block_image {}
+
+.block_fone {
+    background: url('../image/Fone_img.png');
+    background-repeat: no-repeat;
+    /* background-position: left top;  */
+    /* background-size:contain; */
+    height: 360px;
+    max-width: 960px;
+    display:flex; /* Если flex нет, то фон прорисовывается от область текста */
+    /* border: 1px solid red; */
+    /* padding-top: 60px;
+    padding-bottom: 135px;    */
+}
+
+.container_text {
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid rgb(13, 238, 13); */
+    margin-top: 60px;
+
+}
+
+.block_text_h2 {
+    margin-bottom: 5px;
+}
+
+.block_text_h2 h2 {
+    background: #faf42f;
+    text-transform: uppercase;
+    display: inline;
+    font-size: 32px;
+    padding: 0 13px;
+}
+
+.block_text_h2:nth-child(2) {
+    margin-bottom: 6px;
+}
+
+.block_text_p {
+    margin-bottom: 2px;
+}
+
+.block_text_p p {
+    background: #3f3b3c;
+    display: inline;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+/* .block_fone img {
+    width: 100%;
+} */
+
+
+/* Урок 3 - Flexbox вёрстка карточки - вёрстка карточки */
+
+
+.container_card {
+    max-width: 960px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    /* border: 1px solid red; */
+}
+
+.blocks_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    /* border: 1px solid rgb(20, 233, 69); */
+    margin: 0 auto;
+}
+
+.container_card_text {
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid #767577; */
+}
+
+
+.container_card h3 {
+    font-size: 26px;
+    line-height: 28px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container_card p {
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card_item {
+    width: 160px;
+    margin: 0 14px;
+    /* padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px; */
+    /* border: 1px solid #7a6fef; */
+}
+
+.card_item {
+    margin-bottom: 15px;
+}
+
+.card_item:nth-child(1) .top_card {
+    background: #dbe1e6;
+}
+
+.card_item:nth-child(2) .top_card {
+    background: #fcf131;
+}
+
+.card_item:nth-child(3) .top_card {
+    background: #fcf131;
+}
+
+.card_item:nth-child(4) .top_card {
+    background: #fcf131;
+}
+
+.bottom_card {
+    background: #36323a;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.bottom_card p {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0;
+}
+
+.top_card_text {
+    position: relative;
+    top: -20px;
+    line-height: 0;
+    /* border: 1px solid #36323a; */
+}
+
+
+/* Урок 4 - Jquery категориии */
+
+.container_portfolio {
+    max-width: 960px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* border: 1px solid red; */
+}
+
+.block_portfolio {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; */
+    width: 80%;
+    /* border: 1px solid rgb(20, 233, 69); */
+    margin: 0 auto;
+}
+
+.container_portfolio h4 {
+    background: #363636;
+    padding: 5px 20px;
+    display: inline-block;
+    color: #fcf131;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.container_portfolio p {
+    font-size: 16px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.portfolio_menu button {
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.portfolio_menu button:after {
+    content: ' / ';
+}
+
+.portfolio_menu button:last-child::after {
+    /* display: none; */
+    content: '';
+}
+
+.portfolio_image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 1px solid gray; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* height: 440px; */
+}
+
+.portfolio_image img {
+    width: 160px;
+    margin: 9px 12px;
+    /* border: 1px solid red; */
+}
+
+
+/* Урок 6 - slider - Слайдер */
+
+.container_slider {
+    max-width: 960px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* border: 1px solid red; */
+}
+
+.block_slider {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; */
+    width: 80%;
+    /* border: 1px solid rgb(20, 233, 69); */
+    margin: 0 auto;
+}
+
+.slider_text {
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid #525151; */
+}
+
+.container_slider h4 {
+    background: #363636;
+    padding: 5px 20px;
+    display: inline-block;
+    color: #fcf131;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.container_slider p {
+    font-size: 16px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+/* .owl-carousel img { width: 80px;}
+.owl-carousel .slide img { width: 80px;}
+.slide img { width: 80px;} */
+
+
+/* Урок 7 - Нижний блок */
+
+.container_botton {
+    max-width: 960px;
+    background: #363538;
+    color: #fff;
+    /* text-align: center; */
+    padding-top: 26px;
+    padding-bottom: 26px;
+    /* border: 1px solid red; */
+}
+
+.block_botton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    /* border: 1px solid rgb(20, 233, 69); */
+    margin: 0 auto;
+    
+}
+
+.block_left {
+    /* border: 1px solid red; */
+    width: 250px;    
+    padding: 0 15px 10px 15px;  
+}
+
+.block_center {
+    /* border: 1px solid rgb(83, 29, 230); */
+    width: 250px; 
+    padding: 0 15px 10px 15px;   
+}
+
+.block_right {
+    /* border: 1px solid rgb(230, 26, 148); */
+    width: 250px; 
+    padding: 0 15px 10px 13px;    
+}
+
+.block_botton h4 {
+    font-size: 18px;
+    margin: 17px 0;
+}
+
+.block_botton p {
+    font-size: 17px;
+    line-height: 21px;
+    margin: 10px 0;
+}
+
+.block_left a {
+    background: #000;
+    border-bottom: 1px solid #fcf131;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;    
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display:inline-block; /* Если не ставить это свойство ссылка уходит вверх из за падинга */
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+}
+
+.block_left .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    /* border: 1px solid #fff; */
+}
+
+.block_left .images img {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+
+.block_center_text {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.block_center_text img {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.block_center_text p {
+    margin: 0;   
+}
+
+.block_center_text span {
+    color: #fcf131;  
+}
+
+.block_social {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.block_social img {
+    margin-right: 2px;
+}
+
+
+.block_contact {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.contact_img {
+
+}
+
+.contact_text {
+    margin-left: 12px;
+}
+
+.contact_text p {
+    /* margin-top: 6px; */
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+.contact_text p:last-child {
+    margin-top: 0px;
+}
+
+
+/* Блок footer */
+
+.container_footer {
+    max-width: 960px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* border: 1px solid red; */
+}
+
+.block_footer {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; */
+    width: 80%;
+    /* border: 1px solid rgb(20, 233, 69); */
+    margin: 0 auto;   
+}
+
+
+
+/* Урок 2 - Адаптивное меню на css */
+/* Меню - Медиазапросы - стили из видео */
+
+@media screen and (max-width:700px) {
+    .main_menu {
+        display: none;
+    }
+
+    .main_menu li {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+    }
+
+    .main_menu a {
+        display: block;
+        padding: 8px;
+    }
+
+    .toggle_button {
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: #000;
+        margin-top: 26px;
+    }
+
+    .toggle_button:after {
+        content: attr(data-open);
+        display: block;
+    }
+
+    #menu_checkbox:checked+nav[role=navigation] .main_menu {
+        display: block;
+    }
+
+    #menu_checkbox:checked+nav[role=navigation] .toggle_button:after {
+        content: attr(data-close);
+    }
+
+    .header_menu a {
+        margin-right: -65px;
+    }
+
+    .main_menu {
+        position: relative;
+        top: 5px;
+        right: 80px;
+    }
+}
+
+
+/* Урок 2 - Адаптивное меню на css */
+/* Меню - Медиазапросы - мои стили */
+
+@media screen and (max-width:280px) {
+    .header_logo {
+        margin-left: 25px;
+    }
+
+    .header_menu {
+        margin-right: 25px;
+    }
+}
+
+/* Урок 3 - Flexbox вёрстка карточки - Медиазапросы */
+
+@media screen and (max-width:580px) {
+    .container_text {
+        width: 90%;
+        margin: 0 auto;
+        /* border: 1px solid rgb(13, 238, 13); */
+        margin-top: 60px;
+
+    }
+}
+
+@media screen and (max-width:520px) {
+    .block_text_h2 h2 {
+        background: #faf42f;
+        text-transform: uppercase;
+        display: inline;
+        font-size: 24px;
+        padding: 0 13px;
+    }
+
+    .block_text_p p {
+        background: #3f3b3c;
+        display: inline;
+        color: #fff;
+        font-size: 16px;
+        padding: 0 8px;
+    }
+}
+
+
+/* Урок 3 - Flexbox вёрстка карточки - вёрстка карточки - Медиазапросы */
+/* !!! - Здесь можно обойтись и без медиазапросов */
+
+@media screen and (max-width:500px) {
+    .blocks_card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card_item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .container_card h3 {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .container_card p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width:290px) {
+    .container_card h3 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+
+/* Урок 4 - Jquery категориии - Пока здесь медиазапросов нет */
